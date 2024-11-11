@@ -1,0 +1,167 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/*
+ 2. Remove default margin
+*/
+* {
+     margin: 0;
+     padding: 0;
+ }
+
+/*
+ Typographic tweaks!
+ 3. Add accessible line-height
+ 4. Improve text rendering
+*/
+body {
+     line-height: 1.5;
+     -webkit-font-smoothing: antialiased;
+     font-family: system-ui;
+     background-color: #F8EEFF;
+     /* background-color: #E4F4FD */
+}
+
+/*
+ 5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+     display: block;
+     max-width: 100%;
+}
+
+/*
+ 6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+
+/*
+ 7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+.result {
+  margin-block: 50px;
+}
+.container {
+  font-family: 'Red Hat Text';
+  max-width: 375px;
+  padding: 24px;
+  background-color: #FCF8F6;
+  margin-inline: auto;
+}
+h1 {
+  margin-bottom: 32px;
+  font-size: --font-sizetext-preset-1;
+  font-weight: 700;
+  line-height: 48px;
+  text-align: left;
+  color: #260F08;
+}
+.prImg {
+  width: 327px;
+  position: relative;
+
+}
+.addBtn {
+  padding-block: 12px;
+  padding-inline: 28px;
+  display: flex;
+  gap: 8px;
+  width: 180px;
+  height: 44px;
+  padding: --spacing150;
+  border-radius: 999px;
+  border: 1px;
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-rose-400, #AD8A85);
+  font-size: var(--font-sizetext-preset-4);
+  font-weight: 600;
+  line-height: 18.52px;
+  text-align: left;
+  color: #260F08;
+  position: absolute;
+  margin-top: -50px;
+  margin-left: 70px;
+}
+.addBtnNone {
+  background-color: #C73B0F;
+  color: #FFFFFF;
+  padding-inline: 12px;
+}
+.btnInner {
+  display: flex;
+  justify-content: space-between;
+  gap: 55px;
+}
+
+.prCategory {
+  font-size: var(--font-sizetext-preset-4);
+  font-weight: 400;
+  line-height: 18.52px;
+  text-align: left;
+  color: #87635A;
+  margin-top: 16px;
+  margin-bottom: 4px;
+}
+.prName {
+  font-size: var(--spacing200);
+  font-weight: 600;
+  line-height: 21.17px;
+  text-align: left;
+  color: #260F08;
+  margin-bottom: 4px;
+}
+.prPrice {
+  font-size: var(--spacing200);
+  font-weight: 600;
+  line-height: 21.17px;
+  text-align: left;
+  color: #C73B0F;
+  margin-bottom: 24px;
+}
+
+@media (width >= 768px) {
+  .container {
+    max-width: 768px;
+    padding: 40px;
+  }
+   .productList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;   
+  }
+  .prImg {
+    width: 213.33px;
+    height: 212px;   
+  }
+  .addBtn {
+    margin-left: 18px;
+  }
+
+}
+
+@media (width >= 1216px) {
+  .container {
+    max-width: 1216px;
+    padding-block: 88px;
+    padding-inline: 200px;
+  }
+  /* .productList {
+    gap: 48px; yanındaki işlem syf yapmadığım için oynama yaptım
+  } */
+  .prImg {
+    width: 250.67px;
+    height: 240px;
+  }
+  .addBtn {
+    margin-left: 35px;
+  }
+}
